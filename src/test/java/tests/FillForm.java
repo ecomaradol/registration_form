@@ -1,3 +1,5 @@
+package tests;
+
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -40,7 +42,7 @@ public class FillForm {
 
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
         $(".table-responsive").shouldHave(text("Mara Dol"), text("test@test.com"), text("Female"),
-                text("4564564545l"), text("30 August,1983"), text("Math, Arts"), text("Math, Arts"),
+                text("4564564545l"), text("30 August,1983"), text("Math, Arts"),
                 text("Sports"), text("test_file.txt"), text("Address"), text("Uttar Pradesh Agra"));
 
 
