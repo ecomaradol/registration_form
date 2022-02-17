@@ -1,15 +1,7 @@
 package tests;
 
-import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
-
-import static com.codeborne.selenide.Condition.image;
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
-
 
 public class FillFormPageObject extends TestBase {
 
@@ -30,22 +22,22 @@ public class FillFormPageObject extends TestBase {
     @Test
     void successFillForm() {
 
-        registrationPage.setOpen();
-        registrationPage.setHeader(header);
+        registrationPage.openPage();
+        registrationPage.getHeader(header);
         registrationPage.setFirstName(firstName);
         registrationPage.setLastName(lastName);
         registrationPage.setUserEmail(userEmail);
         registrationPage.setUserNumber(userNumber);
         registrationPage.setBirthDate("30", "August", "1983");
-        registrationPage.setSubjects(subjectsInput);
-        registrationPage.setSubjects(subjectsInput1);
-        registrationPage.setGender(gender);
-        registrationPage.setHobby(hobby);
-        registrationPage.setImage("test_file.txt");
+        registrationPage.chooseSubjects(subjectsInput);
+        registrationPage.chooseSubjects(subjectsInput1);
+        registrationPage.chooseGender(gender);
+        registrationPage.chooseHobby(hobby);
+        registrationPage.uploadImage("test_file.txt");
         registrationPage.setAddress(address);
-        registrationPage.setState(state);
-        registrationPage.setCity(city);
-        registrationPage.setButton();
+        registrationPage.chooseState(state);
+        registrationPage.chooseCity(city);
+        registrationPage.clickButton();
         registrationPage.checkForm();
 
     }

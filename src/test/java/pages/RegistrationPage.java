@@ -2,9 +2,6 @@ package pages;
 
 import com.codeborne.selenide.SelenideElement;
 import pages.components.CalendarComponent;
-
-import java.sql.SQLOutput;
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
@@ -30,12 +27,12 @@ public class RegistrationPage {
             buttonInput = $("#submit"),
             formInput = $(".table-responsive");
 
-    public RegistrationPage setOpen() {
+    public RegistrationPage openPage() {
         open("/automation-practice-form");
         return this;
     }
 
-    public void setHeader(String header) {
+    public void getHeader(String header) {
         headerInput.shouldHave(text(header));
     }
 
@@ -56,7 +53,7 @@ public class RegistrationPage {
         userEmailInput.setValue(userEmail);
     }
 
-    public void setGender(String gender) {
+    public void chooseGender(String gender) {
         genderInput.click();
     }
 
@@ -64,15 +61,15 @@ public class RegistrationPage {
         userNumberInput.setValue(userNumber);
     }
 
-    public void setSubjects(String subjectsInput) {
+    public void chooseSubjects(String subjectsInput) {
         subjectsInputs.setValue(subjectsInput).pressEnter();
     }
 
-    public void setHobby(String hobby) {
+    public void chooseHobby(String hobby) {
         hobbyInput.click();
     }
 
-    public void setImage(String image) {
+    public void uploadImage(String image) {
         imageInput.uploadFromClasspath(image);
     }
 
@@ -80,15 +77,15 @@ public class RegistrationPage {
         addressInput.setValue(address);
     }
 
-    public void setState(String state) {
+    public void chooseState(String state) {
         stateInput.setValue(state).pressEnter();
     }
 
-    public void setCity(String city) {
+    public void chooseCity(String city) {
         cityInput.setValue(city).pressEnter();
     }
 
-    public void setButton() {
+    public void clickButton() {
         buttonInput.click();
     }
 
