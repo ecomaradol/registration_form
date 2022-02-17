@@ -28,7 +28,7 @@ public class FillFormPageObject extends TestBase {
         registrationPage.setLastName(lastName);
         registrationPage.setUserEmail(userEmail);
         registrationPage.setUserNumber(userNumber);
-        registrationPage.setBirthDate("30", "August", "1983");
+        registrationPage.setBirthDate("25", "August", "1983");
         registrationPage.chooseSubjects(subjectsInput);
         registrationPage.chooseSubjects(subjectsInput1);
         registrationPage.chooseGender(gender);
